@@ -1,4 +1,4 @@
-package br.usjt.previsoes.interceptor;
+package br.usjt.temprevisao.interceptor;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -7,12 +7,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
+
+
     @Override
     public boolean preHandle(HttpServletRequest request,
-                             HttpServletResponse response,
-                             Object handler) throws Exception {
+                             HttpServletResponse response, Object handler)
+            throws Exception {
         HttpSession session = request.getSession();
-        if (session.getAttribute("usuarioLogado") == null) response.sendRedirect("login");
+        if (session.getAttribute("usuarioLogado") == null)
+            response.sendRedirect("login");
         return true;
     }
+
+
 }

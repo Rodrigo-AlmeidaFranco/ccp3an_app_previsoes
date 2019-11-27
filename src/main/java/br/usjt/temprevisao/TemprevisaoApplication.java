@@ -1,13 +1,13 @@
-package br.usjt.previsoes;
+package br.usjt.temprevisao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PrevisoesApplication {
+public class TemprevisaoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PrevisoesApplication.class, args);
+		SpringApplication.run(TemprevisaoApplication.class, args);
 	}
 
 }

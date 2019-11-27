@@ -1,9 +1,11 @@
-package br.usjt.previsoes;
+package br.usjt.temprevisao;
 
-import br.usjt.previsoes.interceptor.LoginInterceptor;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import br.usjt.temprevisao.interceptor.LoginInterceptor;
 
 @Configuration
 public class AppConfig implements WebMvcConfigurer {
@@ -15,4 +17,5 @@ public class AppConfig implements WebMvcConfigurer {
                 addPathPatterns("/**").
                 excludePathPatterns("/login", "/", "/fazerLogin");
     }
+
 }
